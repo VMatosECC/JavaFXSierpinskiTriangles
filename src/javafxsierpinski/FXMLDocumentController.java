@@ -24,8 +24,8 @@ public class FXMLDocumentController {
     @FXML
     private BorderPane borderPane;
 
-//    @FXML
-//    private Button btnDraw;
+    @FXML
+    private Button btnDraw;
 
     @FXML
     private TextField txtOrder;
@@ -41,6 +41,7 @@ public class FXMLDocumentController {
         txtMessages.setText("");
     }
 
+    
     @FXML
     void btnDrawClick(ActionEvent event) {
         String strOrder = txtOrder.getText();
