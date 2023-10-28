@@ -1,8 +1,11 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+ This app uses JavaFX to draw Sierpinski triangles.
+ A Sierpinski triangle is a fractal with the overall shape 
+ of an equilateral triangle, subdivided recursively into smaller 
+ equilateral triangles. This is an example of a SELF-SIMILAR set. 
+ That is, it is a mathematically generated pattern that is 
+ reproducible at any magnification or reduction (Wiki). 
+*/
 package javafxsierpinski;
 
 import javafx.application.Application;
@@ -19,15 +22,11 @@ public class JavaFXSierpinski extends Application {
         try {        
             FXMLLoader loader = new FXMLLoader(getClass().getResource("FXMLDocument.fxml"));
             Parent root = loader.load();
-            FXMLDocumentController controller = loader.getController();
-
-            // Pass the Stage object to the controller
-            controller.setStage(stage);
-
             Scene scene = new Scene(root, 800, 600);
             stage.setScene(scene);
             stage.setTitle("Sierpinski Triangles");
             stage.show();
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
